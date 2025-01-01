@@ -27,7 +27,13 @@
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
-    "sass": "^1.83.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-discard-empty": "^7.0.0",
+    "postcss-import": "^16.1.0",
+    "postcss-nesting": "^13.0.1",
+    "stylelint": "^16.12.0",
     "typescript": "^5.7.2"
   }
 }
