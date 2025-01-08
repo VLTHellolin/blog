@@ -9,8 +9,10 @@ export interface LinkProps extends RadixLinkProps {
 
 export const Link = ({ children, href, prefetch, replace, ...props }: LinkProps) => {
   return (
-    <NextLink href={href} prefetch={prefetch} replace={replace}>
-      <RadixLink {...props}>{children}</RadixLink>
-    </NextLink>
+    <RadixLink {...props} asChild>
+      <NextLink href={href} prefetch={prefetch} replace={replace}>
+        {children}
+      </NextLink>
+    </RadixLink>
   );
 };
