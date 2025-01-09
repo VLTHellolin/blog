@@ -1,3 +1,10 @@
+.shiki {
+  padding: 15px;
+  button {
+    float: right;
+  }
+}
+
 html.dark .shiki {
   &,
   & span {

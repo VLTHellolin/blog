@@ -1,14 +1,14 @@
 import { PostList } from '@/components/PostList';
-import { Button } from '@radix-ui/themes';
+import { Button, Container } from '@radix-ui/themes';
 
 export default () => {
   return (
-    <div>
+    <Container>
       Hello world
       <br />
       <Button>Test Button</Button>
       <br />
       <PostList />
-    </div>
+    </Container>
   );
 };

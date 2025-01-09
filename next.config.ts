@@ -4,7 +4,7 @@ import type { NextConfig } from 'next';
 const withMDX = createMDX({
   options: {
     // biome-ignore lint/suspicious/noExplicitAny:
-    remarkPlugins: [['remark-gfm'], ['remark-math']] as any,
+    remarkPlugins: [['remark-frontmatter'], ['remark-gfm'], ['remark-math']] as any,
     rehypePlugins: [
       ['rehype-katex', { strict: true }],
       ['@shikijs/rehype', { themes: { light: 'catppuccin-latte', dark: 'catppuccin-mocha' } }],

@@ -1,4 +1,5 @@
 import { getPosts } from '@/lib/posts';
+import { Container } from '@radix-ui/themes';
 
 export const dynamicParams = false;
 
@@ -14,5 +15,9 @@ export default async ({
   const slug = (await params).slug;
   const { default: MDX } = await import(`^/posts/${slug}.mdx`);
 
-  return <MDX />;
+  return (
+    <Container>
+      <MDX />
+    </Container>
+  );
 };
