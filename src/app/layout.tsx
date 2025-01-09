@@ -1,6 +1,6 @@
-import type React from 'react';
 import { Theme } from '@radix-ui/themes';
 import { ThemeProvider } from 'next-themes';
+import type React from 'react';
 
 import '@radix-ui/themes/styles.css';
 import '@/assets/index.css';
