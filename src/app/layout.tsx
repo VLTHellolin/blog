@@ -1,4 +1,7 @@
-import { Layout } from '@/components/Layout';
+import { Theme } from '@radix-ui/themes';
+import { ThemeProvider } from 'next-themes';
+import { Nav } from '@/components/Nav';
+import { Footer } from '@/components/Footer';
 
 import '@radix-ui/themes/styles.css';
 import '@/assets/index.css';
@@ -13,7 +16,13 @@ export default ({ children }: { children: React.ReactNode }) => {
         <link rel='stylesheet' href='https://cdn.hellolin.top/npm/katex@0.16.19/dist/katex.min.css' crossOrigin='anonymous' />
       </head>
       <body>
-        <Layout>{children}</Layout>
+        <ThemeProvider attribute='class'>
+          <Theme>
+            <Nav />
+            {children}
+            <Footer />
+          </Theme>
+        </ThemeProvider>
       </body>
     </html>
   );

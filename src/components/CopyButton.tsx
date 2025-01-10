@@ -24,7 +24,7 @@ export const CopyButton = ({ children, content, ...props }: CopyButtonProps) => 
   };
 
   return (
-    <IconButton color={color} variant='ghost' onClick={handleClick} {...props}>
+    <IconButton className='copy-button' color={color} variant='ghost' onClick={handleClick} {...props}>
       <Icon icon={icon} />
     </IconButton>
   );

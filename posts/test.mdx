@@ -1,13 +1,36 @@
 import { Link } from '@/components/Link';
 
-## Test page
+# Test page
 
-Hello world
+## Header 2
 
-``` js
-(await func()).map(e => e + 2);
+### Header 3
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel gravida ligula. Sed ac dui eget massa eleifend finibus et at risus. Nulla facilisi. Aliquam ac condimentum lectus, id aliquam lacus. Sed fringilla et purus id congue. Cras in venenatis arcu. Nulla facilisi. Quisque eget pretium enim, vel dignissim lacus. Curabitur scelerisque lorem quis purus sodales, non auctor ipsum ullamcorper. Praesent vel nibh felis. Proin finibus ut ligula vitae malesuada.
+
+Nullam at nibh ut libero tincidunt eleifend. Vestibulum sagittis leo vitae rhoncus sodales. Sed ultrices ante quis odio aliquet viverra. Quisque accumsan turpis purus, eget ultrices turpis elementum vel. Nam non venenatis enim, in blandit magna. Phasellus vulputate mattis eros sed faucibus. Nulla lacinia quam dui, sed consectetur est tristique eget. Praesent lobortis nisi sapien, sit amet viverra diam cursus quis. Fusce quam enim, accumsan sed sodales non, gravida non metus. Integer at augue dui. Nulla sed ligula molestie, commodo eros in, molestie lorem. Aenean ut lectus velit. Phasellus mattis finibus semper. Nullam euismod et nulla vitae dignissim. Morbi ac massa libero.
+
+Cras eget varius lectus. Mauris cursus, felis quis congue sodales, turpis lorem condimentum odio, vitae interdum augue diam quis purus. Nulla sodales, tortor et porttitor condimentum, sem orci aliquet massa, ut pharetra eros lorem vitae neque. Fusce interdum porttitor tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla aliquam libero est, et vehicula mi sagittis eu. Fusce eu vestibulum diam, hendrerit pellentesque augue. Phasellus ac ligula vitae arcu ornare venenatis.
+
+``` tsx
+import { Link as RadixLink, type LinkProps as RadixLinkProps } from '@radix-ui/themes';
+import NextLink from 'next/link';
+
+export interface LinkProps extends RadixLinkProps {
+  href: string;
+  prefetch?: boolean | null;
+  replace?: boolean;
+}
+
+export const Link = ({ children, href, prefetch, replace, ...props }: LinkProps) => {
+  return (
+    <RadixLink {...props} asChild>
+      <NextLink href={href} prefetch={prefetch} replace={replace}>
+        {children}
+      </NextLink>
+    </RadixLink>
+  );
+};
 ```
-
-$$\int^6_0 (x^2+2x) \mathrm dx = 108$$
 
 <Link href='/'>Back to home</Link>
