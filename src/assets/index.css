@@ -12,3 +12,10 @@ html.dark .shiki {
     background-color: var(--shiki-dark-bg) !important;
   }
 }
+
+.theme-switch {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 1000;
+}

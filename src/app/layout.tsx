@@ -1,9 +1,12 @@
 import { Theme } from '@radix-ui/themes';
 import { ThemeProvider } from 'next-themes';
 import type React from 'react';
+import dynamic from 'next/dynamic';
 
 import '@radix-ui/themes/styles.css';
 import '@/assets/index.css';
+
+const ThemeSwitch = dynamic(() => import('@/components/ThemeSwitch'));
 
 export default ({ children }: { children: React.ReactNode }) => {
   return (
@@ -16,7 +19,10 @@ export default ({ children }: { children: React.ReactNode }) => {
       </head>
       <body>
         <ThemeProvider attribute='class'>
-          <Theme>{children}</Theme>
+          <Theme>
+            <ThemeSwitch />
+            {children}
+          </Theme>
         </ThemeProvider>
       </body>
     </html>
