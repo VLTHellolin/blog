@@ -1,8 +1,7 @@
-import type { ComponentProps } from 'react';
 import { CopyButton } from './CopyButton';
 import { getNodeText } from '@/lib/nodeText';
 
-export interface CodeBlockProps extends ComponentProps<'pre'> {
+export interface CodeBlockProps extends React.ComponentProps<'pre'> {
   withCopy?: boolean;
 }
 

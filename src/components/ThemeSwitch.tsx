@@ -8,8 +8,8 @@ export const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <IconButton className='theme-switch' color='gray' variant='ghost' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-      <Icon icon={theme === 'dark' ? 'radix-icons:moon' : 'radix-icons:sun'} />
+    <IconButton color='gray' variant='ghost' radius='full' size='2' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+      <Icon icon={theme === 'dark' ? 'ri:moon-line' : 'ri:sun-line'} width={20} />
     </IconButton>
   );
 };

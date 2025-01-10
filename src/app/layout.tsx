@@ -1,12 +1,7 @@
-import { Theme } from '@radix-ui/themes';
-import { ThemeProvider } from 'next-themes';
-import type React from 'react';
-import dynamic from 'next/dynamic';
+import { Layout } from '@/components/Layout';
 
 import '@radix-ui/themes/styles.css';
 import '@/assets/index.css';
-
-const ThemeSwitch = dynamic(() => import('@/components/ThemeSwitch'));
 
 export default ({ children }: { children: React.ReactNode }) => {
   return (
@@ -18,12 +13,7 @@ export default ({ children }: { children: React.ReactNode }) => {
         <link rel='stylesheet' href='https://cdn.hellolin.top/npm/katex@0.16.19/dist/katex.min.css' crossOrigin='anonymous' />
       </head>
       <body>
-        <ThemeProvider attribute='class'>
-          <Theme>
-            <ThemeSwitch />
-            {children}
-          </Theme>
-        </ThemeProvider>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .shiki {
   padding: 15px;
   button {
@@ -13,9 +17,33 @@ html.dark .shiki {
   }
 }
 
-.theme-switch {
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  z-index: 1000;
+nav {
+  position: relative;
+  width: 100%;
+  padding: 1.4rem;
+  box-sizing: border-box;
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid #33333320;
+  html.dark & {
+    border-bottom: 1px solid #e7e7e720;
+  }
+  .spacer {
+    margin-left: auto;
+  }
+  .nav-title {
+    font-weight: bold;
+  }
+  .nav-link {
+    text-decoration: none;
+    transition: all .2s ease-out;
+    opacity: .7;
+    &:hover {
+      opacity: 1;
+    }
+    color: #333333;
+    html.dark & {
+      color: #e7e7e7;
+    }
+  }
 }
