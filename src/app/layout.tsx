@@ -1,7 +1,7 @@
+import { Footer } from '@/components/Footer';
+import { Nav } from '@/components/Nav';
 import { Theme } from '@radix-ui/themes';
 import { ThemeProvider } from 'next-themes';
-import { Nav } from '@/components/Nav';
-import { Footer } from '@/components/Footer';
 
 import '@radix-ui/themes/styles.css';
 import '@/assets/index.css';

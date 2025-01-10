@@ -1,7 +1,7 @@
+import { Icon } from '@iconify/react';
+import { IconButton } from '@radix-ui/themes';
 import dynamic from 'next/dynamic';
 import NextLink from 'next/link';
-import { IconButton } from '@radix-ui/themes';
-import { Icon } from '@iconify/react';
 
 const ThemeSwitch = dynamic(() => import('@/components/ThemeSwitch'));
 

@@ -8,7 +8,7 @@
     "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineWidth": 150
+    "lineWidth": 300
   },
   "organizeImports": {
     "enabled": true

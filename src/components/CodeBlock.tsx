@@ -1,5 +1,5 @@
-import { CopyButton } from './CopyButton';
 import { getNodeText } from '@/lib/nodeText';
+import { CopyButton } from './CopyButton';
 
 export interface CodeBlockProps extends React.ComponentProps<'pre'> {
   withCopy?: boolean;
