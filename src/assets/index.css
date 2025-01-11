@@ -5,6 +5,9 @@ body {
 .shiki {
   position: relative;
   padding: 15px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   .copy-button {
     position: absolute;
     top: 0;
@@ -52,6 +55,10 @@ nav {
   }
 }
 
+main {
+  padding: 1rem 0.5rem;
+}
+
 footer {
   position: relative;
   width: 100%;
@@ -62,5 +69,14 @@ footer {
   border-top: 1px solid #33333320;
   html.dark & {
     border-top: 1px solid #e7e7e720;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 3rem 1rem;
+  }
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
   }
 }

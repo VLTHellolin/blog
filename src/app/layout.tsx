@@ -19,7 +19,7 @@ export default ({ children }: { children: React.ReactNode }) => {
         <ThemeProvider attribute='class'>
           <Theme>
             <Nav />
-            {children}
+            <main>{children}</main>
             <Footer />
           </Theme>
         </ThemeProvider>
