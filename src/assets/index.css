@@ -8,6 +8,15 @@ body {
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  code {
+    color: unset !important;
+    background-color: unset !important;
+    font: unset !important;
+    line-height: unset !important;
+    letter-spacing: unset !important;
+    border-radius: unset !important;
+    padding: unset !important;
+  }
   .copy-button {
     position: absolute;
     top: 0;
@@ -21,6 +30,30 @@ html.dark .shiki {
   & span {
     color: var(--shiki-dark) !important;
     background-color: var(--shiki-dark-bg) !important;
+  }
+}
+
+.alert {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  overflow: hidden;
+  .alert-bigicon {
+    position: absolute;
+    bottom: -1.7rem;
+    right: -1.2rem;
+    opacity: 0.4;
+    transform: rotate(-20deg);
+  }
+  .alert-text * {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    &:first-child {
+      margin-top: -1px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

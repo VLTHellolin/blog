@@ -1,4 +1,8 @@
-import { Link } from '@/components/Link';
+---
+date: 2025-01-10 16:42:31
+---
+
+import { Alert } from '@/components/Alert';
 
 # Test page
 
@@ -10,7 +14,33 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel gravida l
 
 Nullam at nibh ut libero tincidunt eleifend. Vestibulum sagittis leo vitae rhoncus sodales. Sed ultrices ante quis odio aliquet viverra. Quisque accumsan turpis purus, eget ultrices turpis elementum vel. Nam non venenatis enim, in blandit magna. Phasellus vulputate mattis eros sed faucibus. Nulla lacinia quam dui, sed consectetur est tristique eget. Praesent lobortis nisi sapien, sit amet viverra diam cursus quis. Fusce quam enim, accumsan sed sodales non, gravida non metus. Integer at augue dui. Nulla sed ligula molestie, commodo eros in, molestie lorem. Aenean ut lectus velit. Phasellus mattis finibus semper. Nullam euismod et nulla vitae dignissim. Morbi ac massa libero.
 
-Cras eget varius lectus. Mauris cursus, felis quis congue sodales, turpis lorem condimentum odio, vitae interdum augue diam quis purus. Nulla sodales, tortor et porttitor condimentum, sem orci aliquet massa, ut pharetra eros lorem vitae neque. Fusce interdum porttitor tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla aliquam libero est, et vehicula mi sagittis eu. Fusce eu vestibulum diam, hendrerit pellentesque augue. Phasellus ac ligula vitae arcu ornare venenatis.
+---
+
+<Alert>
+  #### Info
+  Lorem ipsum dolor sit amet
+</Alert>
+
+<Alert variant='important'>
+  #### Important
+  Lorem ipsum dolor sit amet
+</Alert>
+
+<Alert variant='warning'>
+  #### Warning
+  Lorem ipsum dolor sit amet
+</Alert>
+
+<Alert variant='danger'>
+  #### Danger
+  Lorem ipsum dolor sit amet
+</Alert>
+
+---
+
+`inline code example`
+
+**bold text** *italic text*
 
 ``` tsx
 import { Link as RadixLink, type LinkProps as RadixLinkProps } from '@radix-ui/themes';
@@ -33,4 +63,10 @@ export const Link = ({ children, href, prefetch, replace, ...props }: LinkProps)
 };
 ```
 
-<Link href='/'>Back to home</Link>
+| Number | Name | Age |
+| ------ | ---- | --- |
+| 1 | John | 20 |
+| 2 | Doe | 30 |
+| 3 | Mary | 28 |
+
+[Back to home](/)

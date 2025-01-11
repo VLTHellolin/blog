@@ -13,10 +13,11 @@ export default async ({
   params: Promise<{ slug: string }>;
 }) => {
   const slug = (await params).slug;
-  const { default: MDX } = await import(`^/posts/${slug}.mdx`);
+  const { default: MDX, frontmatter } = await import(`^/posts/${slug}.mdx`);
 
   return (
     <Container>
+      Date: {frontmatter.date}
       <MDX />
     </Container>
   );
