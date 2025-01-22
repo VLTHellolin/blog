@@ -17,7 +17,9 @@ export default async ({
 
   return (
     <Container>
-      Date: {frontmatter.date}
+      Date:
+      {' '}
+      {frontmatter.date}
       <MDX />
     </Container>
   );

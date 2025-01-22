@@ -1,8 +1,8 @@
 import type { MDXComponents } from 'mdx/types';
-import { Blockquote, Code, Separator, Table } from '@radix-ui/themes';
-import { CodeBlock } from './components/CodeBlock';
 import { Link } from '@/components/Link';
+import { Blockquote, Code, Separator, Table } from '@radix-ui/themes';
 import Image from 'next/image';
+import { CodeBlock } from './components/CodeBlock';
 
 const tableOverrides = {
   table: Table.Root,

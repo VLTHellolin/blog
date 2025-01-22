@@ -13,7 +13,8 @@ export const CopyButton = ({ children, content, ...props }: CopyButtonProps) => 
   const [icon, setIcon] = useState('radix-icons:copy');
 
   const handleClick = () => {
-    if (!content) return;
+    if (!content)
+      return;
     navigator.clipboard.writeText(content);
     setColor('green');
     setIcon('radix-icons:check');

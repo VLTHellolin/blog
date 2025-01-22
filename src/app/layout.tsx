@@ -3,6 +3,7 @@ import { Nav } from '@/components/Nav';
 import { Theme } from '@radix-ui/themes';
 import { ThemeProvider } from 'next-themes';
 
+import 'normalize.css';
 import '@radix-ui/themes/styles.css';
 import '@/assets/index.css';
 

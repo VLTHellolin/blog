@@ -1,11 +1,11 @@
 export default {
   plugins: {
-    autoprefixer: {},
+    'autoprefixer': {},
     'postcss-import': {},
     'postcss-nesting': {},
     'postcss-combine-duplicated-selectors': {},
     'postcss-discard-empty': {},
-    stylelint: {
+    'stylelint': {
       extends: ['stylelint-config-standard'],
     },
   },

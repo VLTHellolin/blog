@@ -1,16 +1,14 @@
 import { getSortedPosts } from '@/lib/posts';
-import { Link } from './Link';
+import { PostCard } from './PostCard';
 
 export const PostList = async () => {
   const posts = await getSortedPosts();
 
   return (
-    <ul>
+    <div>
       {posts.map(e => (
-        <li key={e}>
-          <Link href={`/posts/${e}`}>{e}</Link>
-        </li>
+        <PostCard post={e} key={e} />
       ))}
-    </ul>
+    </div>
   );
 };
