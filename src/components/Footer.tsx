@@ -1,6 +1,6 @@
 import { Link } from './Link';
 
-export const Footer = () => {
+export function Footer() {
   return (
     <footer>
       <div>
@@ -21,4 +21,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+}

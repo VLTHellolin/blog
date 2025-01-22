@@ -1,10 +1,9 @@
 import { PostList } from '@/components/PostList';
-import { Container } from '@radix-ui/themes';
 
-export default () => {
+export default function Page() {
   return (
-    <Container>
+    <div className='container'>
       <PostList />
-    </Container>
+    </div>
   );
 };

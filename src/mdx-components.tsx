@@ -1,27 +1,18 @@
 import type { MDXComponents } from 'mdx/types';
-import { Link } from '@/components/Link';
-import { Blockquote, Code, Separator, Table } from '@radix-ui/themes';
-import Image from 'next/image';
-import { CodeBlock } from './components/CodeBlock';
+import { Code } from './components/Code';
+import { headingFactory } from './components/Heading';
+import { Link } from './components/Link';
 
-const tableOverrides = {
-  table: Table.Root,
-  thead: Table.Header,
-  tbody: Table.Body,
-  tr: Table.Row,
-  th: Table.ColumnHeaderCell,
-  td: Table.Cell,
-};
-
-export function useMDXComponents(components: MDXComponents): MDXComponents {
+export function useMDXComponents(components?: MDXComponents) {
   return {
     a: Link,
-    blockquote: Blockquote,
     code: Code,
-    hr: () => <Separator size='4' />,
-    image: Image,
-    pre: CodeBlock,
-    ...tableOverrides,
+    h1: headingFactory(1),
+    h2: headingFactory(2),
+    h3: headingFactory(3),
+    h4: headingFactory(4),
+    h5: headingFactory(5),
+    h6: headingFactory(6),
     ...components,
   };
 }

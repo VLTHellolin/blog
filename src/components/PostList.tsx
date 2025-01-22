@@ -1,7 +1,7 @@
 import { getSortedPosts } from '@/lib/posts';
 import { PostCard } from './PostCard';
 
-export const PostList = async () => {
+export async function PostList() {
   const posts = await getSortedPosts();
 
   return (
@@ -11,4 +11,4 @@ export const PostList = async () => {
       ))}
     </div>
   );
-};
+}

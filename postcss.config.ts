@@ -5,8 +5,6 @@ export default {
     'postcss-nesting': {},
     'postcss-combine-duplicated-selectors': {},
     'postcss-discard-empty': {},
-    'stylelint': {
-      extends: ['stylelint-config-standard'],
-    },
+    '@unocss/postcss': {},
   },
 };

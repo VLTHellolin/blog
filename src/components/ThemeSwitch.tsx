@@ -1,19 +1,18 @@
 'use client';
 
-import { Icon, loadIcons } from '@iconify/react';
-import { IconButton } from '@radix-ui/themes';
+import { Icon } from '@iconify/react';
 import { useTheme } from 'next-themes';
+import { Button } from './ui/button';
 
-export const ThemeSwitch = () => {
+export function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
-  loadIcons(['ri:moon-line', 'ri:sun-line']);
 
   return (
-    <IconButton color='gray' variant='ghost' radius='full' size='2' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-      <Icon icon={theme === 'dark' ? 'ri:moon-line' : 'ri:sun-line'} width={20} />
-    </IconButton>
+    <Button variant='ghost' size='icon' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+      <Icon icon={theme === 'dark' ? 'lucide:moon' : 'lucide:sun'} />
+    </Button>
   );
-};
+}
 
 // For dynamic loading
 export default ThemeSwitch;

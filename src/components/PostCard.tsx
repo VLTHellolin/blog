@@ -1,19 +1,18 @@
-import { Heading, Text } from '@radix-ui/themes';
 import Link from 'next/link';
 
-export const PostCard = async ({
+export async function PostCard({
   post,
 }: {
   post: string;
-}) => {
+}) {
   const { frontmatter } = await import(`^/posts/${post}.mdx`);
 
   return (
     <div className='post-card'>
-      <Heading as='h4' className='post-card-title'>
+      <h4>
         <Link href={`/posts/${post}`}>{frontmatter.title}</Link>
-      </Heading>
-      <Text color='gray'>{frontmatter.description}</Text>
+      </h4>
+      <p>{frontmatter.description}</p>
     </div>
   );
-};
+}

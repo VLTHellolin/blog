@@ -11,7 +11,6 @@ export default antfu({
   rules: {
     'style/brace-style': ['error', '1tbs'],
     'style/jsx-quotes': ['error', 'prefer-single'],
-    'antfu/top-level-function': 'off',
-    'react-refresh/only-export-components': 'off',
+    'react/prefer-destructuring-assignment': 'off',
   },
 });

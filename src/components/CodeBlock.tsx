@@ -5,7 +5,7 @@ export interface CodeBlockProps extends React.ComponentProps<'pre'> {
   withCopy?: boolean;
 }
 
-export const CodeBlock = ({ children, withCopy, ...props }: CodeBlockProps) => {
+export function CodeBlock({ children, withCopy, ...props }: CodeBlockProps) {
   return (
     <pre {...props}>
       {children}
