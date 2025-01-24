@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { Icon } from '@iconify/react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import * as React from 'react';
@@ -21,6 +22,20 @@ const alertVariants = cva(
     },
   },
 );
+
+function AlertIcon({ variant }: VariantProps<typeof alertVariants>) {
+  const icons = {
+    default: 'lucide:chevron-right',
+    info: 'lucide:info',
+    warning: 'lucide:triangle-alert',
+    important: 'lucide:circle-alert',
+    success: 'lucide:circle-check',
+    danger: 'lucide:circle-x',
+  };
+  return (
+    <Icon icon={icons[variant ?? 'default']} className='h-4 w-4' />
+  );
+}
 
 function Alert({ ref, className, variant, ...props }: React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants> & { ref?: React.RefObject<HTMLDivElement> }) {
   return (
@@ -53,4 +68,4 @@ function AlertDescription({ ref, className, ...props }: React.HTMLAttributes<HTM
   );
 }
 
-export { Alert, AlertDescription, AlertTitle };
+export { Alert, AlertDescription, AlertIcon, AlertTitle };

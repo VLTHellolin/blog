@@ -1,6 +1,8 @@
 export function Code({ children, ...props }: React.ComponentPropsWithRef<'code'>) {
+  // MDX will replace all code elements, whether they are inline or block
+  // inline styles are in global.css
   return (
-    <code className='rounded-md bg-background/75' {...props}>
+    <code {...props}>
       {children}
     </code>
   );
