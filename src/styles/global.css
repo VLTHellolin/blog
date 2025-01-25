@@ -1,5 +1,18 @@
 @unocss all;
 
+html.dark .shiki,
+html.dark .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}
+
+body {
+  overflow-y: scroll;
+  ::selection {
+    background: #8884;
+  }
+}
+
 :not(pre) > code {
   @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] text-sm font-semibold font-mono;
 }

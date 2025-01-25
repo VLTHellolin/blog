@@ -42,7 +42,7 @@ function Alert({ ref, className, variant, ...props }: React.HTMLAttributes<HTMLD
     <div
       ref={ref}
       role='alert'
-      className={cn(alertVariants({ variant }), className)}
+      className={cn('mt-4', alertVariants({ variant }), className)}
       {...props}
     />
   );
@@ -52,7 +52,7 @@ function AlertTitle({ ref, className, ...props }: React.HTMLAttributes<HTMLHeadi
   return (
     <h5
       ref={ref}
-      className={cn('mb-1 font-medium leading-none tracking-tight', className)}
+      className={cn('mb-1 font-bold leading-none tracking-tight', className)}
       {...props}
     />
   );

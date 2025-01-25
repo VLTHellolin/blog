@@ -1,7 +1,7 @@
 import { Footer } from '@/components/Footer';
 import { Nav } from '@/components/Nav';
-import { ThemeProvider } from 'next-themes';
 import { Sidebar } from '@/components/Sidebar';
+import { ThemeProvider } from 'next-themes';
 
 import '@unocss/reset/tailwind.css';
 import '@/styles/global.css';
@@ -19,8 +19,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <ThemeProvider attribute='class' defaultTheme='system'>
           <Nav />
           <main className='mt-20 flex justify-center'>
-            <div className='container flex gap-2'>
-              <div>
+            <div className='flex gap-2 container'>
+              <div className='flex flex-col gap-2'>
                 <Sidebar />
               </div>
               <div className='w-full'>

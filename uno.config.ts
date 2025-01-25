@@ -10,11 +10,11 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      brand: '#1d4ed8',
+      brand: '#0284c7',
       warning: '#d97706',
-      important: '#5b21b6',
+      important: '#4f46e5',
       success: '#047857',
-      danger: '#991b1b',
+      danger: '#dc2626',
     },
   },
 });

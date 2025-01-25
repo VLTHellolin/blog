@@ -4,7 +4,7 @@ import * as React from 'react';
 
 function Table({ ref, className, ...props }: React.HTMLAttributes<HTMLTableElement> & { ref?: React.RefObject<HTMLTableElement> }) {
   return (
-    <div className='relative w-full overflow-auto'>
+    <div className='relative mt-4 w-full overflow-auto'>
       <table
         ref={ref}
         className={cn('w-full caption-bottom text-sm', className)}

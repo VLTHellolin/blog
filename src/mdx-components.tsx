@@ -5,6 +5,7 @@ import { H1, H2, H3, H4, H5, H6 } from './components/Heading';
 import { Link } from './components/Link';
 import { ListItem, OrderedList, UnorderedList } from './components/List';
 import { Paragraph } from './components/Paragraph';
+import { Pre } from './components/Pre';
 import { Alert, AlertDescription, AlertIcon, AlertTitle } from './components/ui/alert';
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from './components/ui/table';
 import { withAlertType } from './lib/githubAlert';
@@ -12,6 +13,7 @@ import { withAlertType } from './lib/githubAlert';
 export function useMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     a: Link,
+    pre: Pre,
     code: Code,
     p: Paragraph,
     h1: H1,
