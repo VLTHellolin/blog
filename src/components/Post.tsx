@@ -18,7 +18,7 @@ export async function Post({ post }: { post: string }) {
         {description}
       </CardContent>
       <CardFooter>
-        <Link href={`/posts/${post}`}>
+        <Link href={`/post/${post}`}>
           Read more...
         </Link>
       </CardFooter>

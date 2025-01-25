@@ -1,6 +1,5 @@
 import { Footer } from '@/components/Footer';
 import { Nav } from '@/components/Nav';
-import { Sidebar } from '@/components/Sidebar';
 import { ThemeProvider } from 'next-themes';
 import { ViewTransitions } from 'next-view-transitions';
 
@@ -20,18 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <ViewTransitions>
           <ThemeProvider attribute='class' defaultTheme='system'>
             <Nav />
-            <main className='mt-20 flex justify-center'>
-              <div className='grid grid-cols-5 gap-2 container'>
-                <div className='col-span-1'>
-                  <div className='sticky top-20 flex flex-col gap-2'>
-                    <Sidebar />
-                  </div>
-                </div>
-                <div className='col-span-4'>
-                  {children}
-                </div>
-              </div>
-            </main>
+            {children}
             <Footer />
           </ThemeProvider>
         </ViewTransitions>

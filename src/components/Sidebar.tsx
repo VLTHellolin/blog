@@ -2,10 +2,15 @@ import { Icon } from '@iconify/react';
 // import NextLink from 'next/link';
 import { Link as NextLink } from 'next-view-transitions';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 
-export function Sidebar() {
+export function Sidebar({
+  toc,
+}: {
+  toc?: boolean;
+}) {
   return (
     <>
       <Card>
@@ -31,12 +36,36 @@ export function Sidebar() {
         </CardFooter>
       </Card>
 
-      <Card>
+      {toc
+      && (
+        <Card>
+          <CardHeader>
+            <CardTitle className='text-lg'>TOC</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <h4 className='text-lg font-semibold'>Header 2</h4>
+            <h5 className='text-base font-semibold'>Header 3</h5>
+          </CardContent>
+        </Card>
+      )}
+
+      <Card style={{ viewTransitionName: 'sidebar-categories' }}>
         <CardHeader>
           <CardTitle className='text-lg'>Categories</CardTitle>
         </CardHeader>
         <CardContent>
-          Lorem ipsum dolor
+          <div className='flex justify-between pb-2'>
+            Category 1
+            <Badge variant='secondary'>11</Badge>
+          </div>
+          <div className='flex justify-between pb-2'>
+            Category 2
+            <Badge variant='secondary'>45</Badge>
+          </div>
+          <div className='flex justify-between pb-2'>
+            Category 3
+            <Badge variant='secondary'>14</Badge>
+          </div>
         </CardContent>
       </Card>
     </>
