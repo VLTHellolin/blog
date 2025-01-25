@@ -7,7 +7,7 @@ export async function PostList() {
 
   return (
     <>
-      <div className='flex flex-col gap-2'>
+      <div className='grid grid-cols-2 gap-2'>
         {posts.map(e => (
           <Post post={e} key={e} />
         ))}

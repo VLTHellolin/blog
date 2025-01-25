@@ -6,9 +6,16 @@ import { Button } from './ui/button';
 
 export function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
+  const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
+
+  const startTransition = () => {
+    if (!document.startViewTransition)
+      toggleTheme();
+    else document.startViewTransition(toggleTheme);
+  };
 
   return (
-    <Button variant='ghost' size='icon' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+    <Button variant='ghost' size='icon' onClick={startTransition}>
       <Icon icon={theme === 'dark' ? 'lucide:moon' : 'lucide:sun'} />
     </Button>
   );

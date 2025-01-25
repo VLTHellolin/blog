@@ -2,7 +2,8 @@ import type { ButtonProps } from '@/components/ui/button';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Icon } from '@iconify/react';
-import NextLink from 'next/link';
+// import NextLink from 'next/link';
+import { Link as NextLink } from 'next-view-transitions';
 
 function Pagination({ className, ...props }: React.ComponentPropsWithRef<'nav'>) {
   return (

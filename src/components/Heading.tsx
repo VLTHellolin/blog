@@ -10,11 +10,11 @@ function headingFactory(level: 1 | 2 | 3 | 4 | 5 | 6) {
         : 'font-semibold',
       {
         h1: 'mt-2 text-4xl',
-        h2: 'mt-10 border-b pb-2 text-3xl',
-        h3: 'mt-8 text-2xl',
-        h4: 'mt-8 text-xl',
-        h5: 'mt-8 text-lg',
-        h6: 'mt-8 text-base',
+        h2: 'mt-6 border-b pb-2 text-3xl',
+        h3: 'mt-6 text-2xl',
+        h4: 'mt-6 text-xl',
+        h5: 'mt-6 text-lg',
+        h6: 'mt-6 text-base',
       }[Tag],
       className,
     );

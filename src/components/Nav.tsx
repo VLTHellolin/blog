@@ -1,6 +1,7 @@
 import { Icon } from '@iconify/react';
+// import NextLink from 'next/link';
+import { Link as NextLink } from 'next-view-transitions';
 import dynamic from 'next/dynamic';
-import NextLink from 'next/link';
 import { Button } from './ui/button';
 
 const ThemeSwitch = dynamic(() => import('@/components/ThemeSwitch'));
@@ -32,7 +33,7 @@ export function Nav() {
           </NextLink>
         </Button>
         <Button variant='ghost' size='icon' asChild>
-          <NextLink href='/'>
+          <NextLink href='/api/feed'>
             <Icon icon='lucide:rss' />
           </NextLink>
         </Button>

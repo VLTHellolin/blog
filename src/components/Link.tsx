@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
-import NextLink from 'next/link';
+// import NextLink from 'next/link';
+import { Link as NextLink } from 'next-view-transitions';
 
 export function Link({ className, children, ...props }: React.ComponentPropsWithRef<typeof NextLink>) {
   return (

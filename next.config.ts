@@ -2,9 +2,10 @@ import type { NextConfig } from 'next';
 import createMDX from '@next/mdx';
 
 const withMDX = createMDX({
+  extension: /\.md$/,
   options: {
     remarkPlugins: [
-      ['remark-frontmatter'],
+      ['remark-frontmatter', { type: 'yaml', marker: '-' }],
       ['remark-mdx-frontmatter'],
       ['remark-gfm'],
       ['remark-math'],
@@ -17,7 +18,7 @@ const withMDX = createMDX({
 });
 
 const nextConfig: NextConfig = {
-  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
+  pageExtensions: ['ts', 'tsx', 'md'],
 };
 
 export default withMDX(nextConfig);

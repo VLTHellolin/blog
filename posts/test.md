@@ -22,15 +22,15 @@ Nullam at nibh ut libero tincidunt eleifend. Vestibulum sagittis leo vitae rhonc
 > lorem ipsum
 
 > [!warning]
-> 
+>
 > lorem ipsum
 
 > [!important]
-> 
+>
 > lorem ipsum
 
 > [!success]
-> 
+>
 > lorem ipsum
 
 > [!danger]
@@ -53,7 +53,7 @@ export interface LinkProps extends RadixLinkProps {
   replace?: boolean;
 }
 
-export const Link = ({ children, href, prefetch, replace, ...props }: LinkProps) => {
+export function Link({ children, href, prefetch, replace, ...props }: LinkProps) {
   return (
     <RadixLink {...props} asChild>
       <NextLink href={href} prefetch={prefetch} replace={replace}>
@@ -61,7 +61,7 @@ export const Link = ({ children, href, prefetch, replace, ...props }: LinkProps)
       </NextLink>
     </RadixLink>
   );
-};
+}
 ```
 
 | Number | Name | Age |
