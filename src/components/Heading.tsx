@@ -1,9 +1,11 @@
 import { cn } from '@/lib/utils';
+import { transformTitleId } from '@/plugins/utils';
 
 function headingFactory(level: 1 | 2 | 3 | 4 | 5 | 6) {
   return function ({ children, className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
     const Tag = `h${level}` as const;
     const classes = cn(
+      'toc-heading',
       'scroll-m-20 tracking-tight',
       Tag === 'h1'
         ? 'font-bold'
@@ -20,7 +22,7 @@ function headingFactory(level: 1 | 2 | 3 | 4 | 5 | 6) {
     );
 
     return (
-      <Tag className={classes} {...props}>
+      <Tag className={classes} id={transformTitleId(children as string)} {...props}>
         {children}
       </Tag>
     );

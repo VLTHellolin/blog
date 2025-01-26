@@ -1,19 +1,27 @@
 import type { NextConfig } from 'next';
+import remarkMdxToc from '@/plugins/remark-mdx-toc';
 import createMDX from '@next/mdx';
+import rehypeShiki from '@shikijs/rehype';
+import rehypeKatex from 'rehype-katex';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 
 const withMDX = createMDX({
   extension: /\.md$/,
   options: {
     remarkPlugins: [
-      ['remark-frontmatter', { type: 'yaml', marker: '-' }],
-      ['remark-mdx-frontmatter'],
-      ['remark-gfm'],
-      ['remark-math'],
-    ] as any,
+      [remarkFrontmatter, { type: 'yaml', marker: '-' }],
+      [remarkMdxFrontmatter],
+      [remarkMdxToc],
+      [remarkGfm],
+      [remarkMath],
+    ],
     rehypePlugins: [
-      ['rehype-katex', { strict: true }],
-      ['@shikijs/rehype', { themes: { light: 'github-light-default', dark: 'github-dark-default' } }],
-    ] as any,
+      [rehypeKatex, { strict: true }],
+      [rehypeShiki, { themes: { light: 'github-light-default', dark: 'github-dark-default' } }],
+    ],
   },
 });
 

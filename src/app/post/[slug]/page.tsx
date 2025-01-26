@@ -15,13 +15,13 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
-  const { default: MDX, frontmatter } = await import(`^/posts/${slug}.md`);
+  const { default: MDX, frontmatter, toc } = await import(`^/posts/${slug}.md`);
   const { title, date } = frontmatter;
 
   return (
     <Container>
       <ContainerSide>
-        <Sidebar toc />
+        <Sidebar toc={toc} />
       </ContainerSide>
       <ContainerMain>
         <Card>

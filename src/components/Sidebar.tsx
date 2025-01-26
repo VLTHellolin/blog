@@ -1,6 +1,7 @@
+import type { TocHeading } from '@/plugins/remark-mdx-toc';
 import { Icon } from '@iconify/react';
-// import NextLink from 'next/link';
-import { Link as NextLink } from 'next-view-transitions';
+import NextLink from 'next/link';
+import { TOC } from './TOC';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
@@ -9,7 +10,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 export function Sidebar({
   toc,
 }: {
-  toc?: boolean;
+  toc?: TocHeading[];
 }) {
   return (
     <>
@@ -24,27 +25,26 @@ export function Sidebar({
         </CardHeader>
         <CardFooter className='float-right mt--2'>
           <Button variant='ghost' size='icon' asChild>
-            <NextLink href='https://github.com/VLTHellolin' target='_blank' rel='noopener noreferrer'>
+            <NextLink href='https://github.com/VLTHellolin' target='_blank' rel='noopener'>
               <Icon icon='lucide:github' />
             </NextLink>
           </Button>
           <Button variant='ghost' size='icon' asChild>
-            <NextLink href='https://x.com/VLTHellolin' target='_blank' rel='noopener noreferrer'>
+            <NextLink href='https://x.com/VLTHellolin' target='_blank' rel='noopener'>
               <Icon icon='lucide:twitter' />
             </NextLink>
           </Button>
         </CardFooter>
       </Card>
 
-      {toc
+      {toc && !!toc.length
       && (
         <Card>
           <CardHeader>
-            <CardTitle className='text-lg'>TOC</CardTitle>
+            <CardTitle className='text-lg'>On this page</CardTitle>
           </CardHeader>
-          <CardContent>
-            <h4 className='text-lg font-semibold'>Header 2</h4>
-            <h5 className='text-base font-semibold'>Header 3</h5>
+          <CardContent className='mt--2'>
+            <TOC toc={toc} />
           </CardContent>
         </Card>
       )}
@@ -53,7 +53,7 @@ export function Sidebar({
         <CardHeader>
           <CardTitle className='text-lg'>Categories</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className='mt--2'>
           <div className='flex justify-between pb-2'>
             Category 1
             <Badge variant='secondary'>11</Badge>

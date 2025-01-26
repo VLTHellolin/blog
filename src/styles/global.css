@@ -8,6 +8,7 @@ html.dark .shiki span {
 
 body {
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 ::selection {
   background: #8884;
