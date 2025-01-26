@@ -16,26 +16,7 @@ body {
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: 0.3s;
-  transform: none !important;
 }
-
-/* ::view-transition-new(root) {
-  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="100%" cy="0" r="20" fill="white"/></svg>') top right / 0 no-repeat;
-  mask-origin: content-box;
-  animation: scale 1s;
-  transform-origin: top right;
-}
-::view-transition-old(root),
-.dark::view-transition-old(root) {
-  animation: scale 1s;
-  transform-origin: top right;
-  z-index: -1;
-}
-@keyframes scale {
-  to {
-    mask-size: 350vmax;
-  }
-} */
 
 :not(pre) > code {
   @apply relative rounded bg-muted px-0.3rem py-0.2rem text-sm font-semibold font-mono;
