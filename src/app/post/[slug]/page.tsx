@@ -1,5 +1,5 @@
-import { Container, ContainerMain, ContainerSide } from '@/components/Container';
-import { Sidebar } from '@/components/Sidebar';
+import { Container } from '@/components/Container';
+import { TOC } from '@/components/TOC';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { getPosts } from '@/lib/posts';
 
@@ -20,24 +20,20 @@ export default async function Page({
 
   return (
     <Container>
-      <ContainerSide>
-        <Sidebar toc={toc} />
-      </ContainerSide>
-      <ContainerMain>
-        <Card>
-          <CardHeader>
-            <CardTitle className='w-fit text-3xl font-bold' style={{ viewTransitionName: `post-title-${slug}` }}>
-              {title}
-            </CardTitle>
-            <CardDescription className='w-fit' style={{ viewTransitionName: `post-desc-${slug}` }}>
-              {date}
-            </CardDescription>
-          </CardHeader>
-          <CardContent className='mt--4'>
-            <MDX />
-          </CardContent>
-        </Card>
-      </ContainerMain>
+      <Card>
+        <CardHeader>
+          <CardTitle className='w-fit text-2xl font-bold' style={{ viewTransitionName: `post-title-${slug}` }}>
+            {title}
+          </CardTitle>
+          <CardDescription className='w-fit' style={{ viewTransitionName: `post-desc-${slug}` }}>
+            {date.split(' ')[0]}
+          </CardDescription>
+        </CardHeader>
+        <CardContent className='mt--4'>
+          <MDX />
+        </CardContent>
+      </Card>
+      {toc && !!toc.length && <TOC toc={toc} />}
     </Container>
   );
 };

@@ -1,6 +1,7 @@
 ---
 title: P9881 [EC Final 2021] Elden Ring 题解
 description: 洛谷 P9881 题解
+category: OI
 date: 2024-10-03 16:46:54
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: P6798 [StOI-2] 简单的树 题解
 description: 洛谷 P6798 题解
+category: OI
 date: 2024-10-10 21:20:01
 ---
 

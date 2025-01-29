@@ -7,11 +7,11 @@ export async function Post({ post }: { post: string }) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className='w-fit' style={{ viewTransitionName: `post-title-${post}` }}>
+        <CardTitle className='w-fit text-xl' style={{ viewTransitionName: `post-title-${post}` }}>
           {title}
         </CardTitle>
         <CardDescription className='w-fit' style={{ viewTransitionName: `post-desc-${post}` }}>
-          {date}
+          {date.split(' ')[0]}
         </CardDescription>
       </CardHeader>
       <CardContent>

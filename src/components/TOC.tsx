@@ -31,14 +31,17 @@ export function TOC({
   }, [toc]);
 
   return (
-    <ul className='ml-1 list-none text-muted-foreground'>
-      {toc.map(({ depth, title, link }) => (
-        <li className={cn('transition-colors', link === activeId ? 'text-foreground' : 'hover:text-foreground')} style={{ marginLeft: `${depth - 2}rem` }} key={link}>
-          <NextLink href={`#${link}`}>
-            {title}
-          </NextLink>
-        </li>
-      ))}
-    </ul>
+    <div className='fixed left-10 top-30 hidden lg:block opacity-60 hover:opacity-100 transition-opacity max-w-60'>
+      <div className='mb-1 font-semibold'>On this page</div>
+      <ul className='list-none text-sm text-muted-foreground'>
+        {toc.map(({ depth, title, link }) => (
+          <li className={cn('transition-colors', link === activeId ? 'text-foreground' : 'hover:text-foreground')} style={{ marginLeft: `${(depth - 2) / 2}rem` }} key={link}>
+            <NextLink href={`#${link}`}>
+              {title}
+            </NextLink>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

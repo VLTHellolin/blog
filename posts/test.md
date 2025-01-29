@@ -1,6 +1,7 @@
 ---
 title: This is a test page
 description: Lorem ipsum dolor sit amet
+category: Test
 date: 2025-01-22 16:42:31
 ---
 

@@ -1,3 +1,4 @@
+import { getSortedPosts } from '@/lib/posts';
 import RSS from 'rss';
 
 export async function GET() {
@@ -9,21 +10,22 @@ export async function GET() {
     language: 'zh-CN',
   });
 
-  // const response = await fetch('https://example.com/api/posts');
-  // const posts = await response.json();
+  const posts = await getSortedPosts();
 
-  // posts.forEach((post) => {
-  //   feed.item({
-  //     title: post.title,
-  //     description: post.description,
-  //     url: `https://example.com/posts/${post.slug}`,
-  //     date: post.publishedAt,
-  //   });
-  // });
+  for (const postPath of posts) {
+    const { frontmatter } = await import(`^/posts/${postPath}.md`);
+
+    feed.item({
+      title: frontmatter.title,
+      description: frontmatter.description,
+      url: `https://hellolin.top/post/${postPath}`,
+      date: frontmatter.date,
+    });
+  }
 
   return new Response(feed.xml({ indent: true }), {
     headers: {
-      'Content-Type': 'application/rss+xml',
+      'Content-Type': 'application/rss+xml; charset=utf-8',
     },
   });
 }

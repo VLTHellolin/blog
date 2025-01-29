@@ -1,6 +1,5 @@
-import { Container, ContainerMain, ContainerSide } from '@/components/Container';
+import { Container } from '@/components/Container';
 import { PostList } from '@/components/PostList';
-import { Sidebar } from '@/components/Sidebar';
 import { getPosts } from '@/lib/posts';
 
 export const dynamicParams = false;
@@ -26,12 +25,7 @@ export default async function Page({
 
   return (
     <Container>
-      <ContainerSide>
-        <Sidebar />
-      </ContainerSide>
-      <ContainerMain>
-        <PostList page={Number.parseInt(slug)} />
-      </ContainerMain>
+      <PostList page={Number.parseInt(slug)} />
     </Container>
   );
 };
