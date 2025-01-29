@@ -37,10 +37,9 @@ function AlertIcon({ variant }: VariantProps<typeof alertVariants>) {
   );
 }
 
-function Alert({ ref, className, variant, ...props }: React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants> & { ref?: React.RefObject<HTMLDivElement> }) {
+function Alert({ className, variant, ...props }: React.ComponentPropsWithRef<'div'> & VariantProps<typeof alertVariants>) {
   return (
     <div
-      ref={ref}
       role='alert'
       className={cn('mt-4', alertVariants({ variant }), className)}
       {...props}
@@ -48,20 +47,18 @@ function Alert({ ref, className, variant, ...props }: React.HTMLAttributes<HTMLD
   );
 }
 
-function AlertTitle({ ref, className, ...props }: React.HTMLAttributes<HTMLHeadingElement> & { ref?: React.RefObject<HTMLParagraphElement> }) {
+function AlertTitle({ className, ...props }: React.ComponentPropsWithRef<'h5'>) {
   return (
     <h5
-      ref={ref}
       className={cn('mb-1 font-bold leading-none tracking-tight', className)}
       {...props}
     />
   );
 }
 
-function AlertDescription({ ref, className, ...props }: React.HTMLAttributes<HTMLParagraphElement> & { ref?: React.RefObject<HTMLParagraphElement> }) {
+function AlertDescription({ className, ...props }: React.ComponentPropsWithRef<'div'>) {
   return (
     <div
-      ref={ref}
       className={cn('text-sm [&_p]:leading-relaxed', className)}
       {...props}
     />
