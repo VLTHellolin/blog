@@ -1,4 +1,3 @@
-import { Footer } from '@/components/Footer';
 import { Nav } from '@/components/Nav';
 import { ThemeProvider } from 'next-themes';
 import { ViewTransitions } from 'next-view-transitions';
@@ -20,7 +19,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <ThemeProvider attribute='class' defaultTheme='system'>
             <Nav />
             {children}
-            <Footer />
           </ThemeProvider>
         </ViewTransitions>
       </body>

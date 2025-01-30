@@ -12,7 +12,7 @@ export async function PostList({
   const postsLength = Math.ceil(posts.length / 8);
   const currentPosts = posts.slice((page - 1) * 8, page * 8);
 
-  const getLink = (target: number) => target === 1 ? '/' : `/page/${page}`;
+  const getLink = (target: number) => target === 1 ? '/blog' : `/blog/${page}`;
 
   return (
     <>
@@ -33,7 +33,7 @@ export async function PostList({
           }
 
           <PaginationItem>
-            <PaginationLink href='/' isActive={page === 1}>1</PaginationLink>
+            <PaginationLink href='/blog' isActive={page === 1}>1</PaginationLink>
           </PaginationItem>
 
           {

@@ -31,7 +31,7 @@ export function TOC({
   }, [toc]);
 
   return (
-    <div className='fixed left-10 top-30 hidden lg:block opacity-60 hover:opacity-100 transition-opacity max-w-60'>
+    <div className='fixed left-10 top-30 hidden max-w-60 opacity-60 transition-opacity lg:block hover:opacity-100'>
       <div className='mb-1 font-semibold'>On this page</div>
       <ul className='list-none text-sm text-muted-foreground'>
         {toc.map(({ depth, title, link }) => (

@@ -12,7 +12,7 @@ export function Nav() {
       <div className='flex justify-center container'>
         <div className='h-14 w-2/3 flex items-center'>
           <NextLink className='mr-4 flex items-center gap-2 font-bold' href='/'>
-            <Icon icon='lucide:book-text' />
+            <Icon icon='lucide:chart-no-axes-gantt' />
             VLTHellolin
           </NextLink>
 
@@ -20,24 +20,14 @@ export function Nav() {
             <NextLink href='/'>Home</NextLink>
           </Button>
           <Button variant='ghost' size='sm' asChild>
-            <NextLink href='/'>Archive</NextLink>
+            <NextLink href='/blog'>Blog</NextLink>
           </Button>
           <Button variant='ghost' size='sm' asChild>
-            <NextLink href='/'>About</NextLink>
+            <NextLink href='/'>Projects</NextLink>
           </Button>
 
           <div className='m-a' />
 
-          <Button variant='ghost' size='icon' asChild>
-            <NextLinkWithoutVTA href='https://github.com/VLTHellolin' target='_blank' rel='noopener'>
-              <Icon icon='lucide:github' />
-            </NextLinkWithoutVTA>
-          </Button>
-          <Button variant='ghost' size='icon' asChild>
-            <NextLinkWithoutVTA href='https://x.com/VLTHellolin' target='_blank' rel='noopener'>
-              <Icon icon='lucide:twitter' />
-            </NextLinkWithoutVTA>
-          </Button>
           <Button variant='ghost' size='icon' asChild>
             <NextLinkWithoutVTA href='/api/feed' target='_blank'>
               <Icon icon='lucide:rss' />
