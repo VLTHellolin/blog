@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react';
 import { Link as NextLink } from 'next-view-transitions';
 import dynamic from 'next/dynamic';
 import NextLinkWithoutVTA from 'next/link';
@@ -12,7 +11,7 @@ export function Nav() {
       <div className='flex justify-center container'>
         <div className='h-14 w-2/3 flex items-center'>
           <NextLink className='mr-4 flex items-center gap-2 font-bold' href='/'>
-            <Icon icon='lucide:chart-no-axes-gantt' />
+            <div className='i-lucide-chart-no-axes-gantt' />
             VLTHellolin
           </NextLink>
 
@@ -30,7 +29,7 @@ export function Nav() {
 
           <Button variant='ghost' size='icon' asChild>
             <NextLinkWithoutVTA href='/api/feed' target='_blank'>
-              <Icon icon='lucide:rss' />
+              <div className='i-lucide-rss' />
             </NextLinkWithoutVTA>
           </Button>
           <ThemeSwitch />

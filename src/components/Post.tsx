@@ -14,7 +14,7 @@ export async function Post({ post }: { post: string }) {
           {date.split(' ')[0]}
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className='text-muted-foreground'>
         {description}
       </CardContent>
       <CardFooter>

@@ -1,4 +1,4 @@
-import { defineConfig, presetUno } from 'unocss';
+import { defineConfig, presetIcons, presetUno } from 'unocss';
 import { presetAnimations } from 'unocss-preset-animations';
 import { presetShadcn } from 'unocss-preset-shadcn';
 
@@ -7,6 +7,12 @@ export default defineConfig({
     presetUno(),
     presetAnimations(),
     presetShadcn(),
+    presetIcons({
+      collections: {
+        lucide: () => import('@iconify-json/lucide/icons.json').then(e => e.default),
+        ri: () => import('@iconify-json/ri/icons.json').then(e => e.default),
+      },
+    }),
   ],
   theme: {
     colors: {

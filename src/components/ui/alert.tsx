@@ -1,20 +1,19 @@
 import { cn } from '@/lib/utils';
-import { Icon } from '@iconify/react';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import * as React from 'react';
 
 const alertVariants = cva(
-  'relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4',
+  'relative w-full rounded-lg border p-4 [&>span~*]:pl-7 [&>span+div]:translate-y-[-3px] [&>span]:absolute [&>span]:left-4 [&>span]:top-4',
   {
     variants: {
       variant: {
-        default: 'bg-background text-foreground [&>svg]:text-foreground',
-        info: 'border-brand/50 text-brand dark:border-brand [&>svg]:text-brand',
-        warning: 'border-warning/50 text-warning dark:border-warning [&>svg]:text-warning',
-        important: 'border-important/50 text-important dark:border-important [&>svg]:text-important',
-        success: 'border-success/50 text-success dark:border-success [&>svg]:text-success',
-        danger: 'border-danger/50 text-danger dark:border-danger [&>svg]:text-danger',
+        default: 'bg-background text-foreground',
+        info: 'border-brand/50 text-brand dark:border-brand',
+        warning: 'border-warning/50 text-warning dark:border-warning',
+        important: 'border-important/50 text-important dark:border-important',
+        success: 'border-success/50 text-success dark:border-success',
+        danger: 'border-danger/50 text-danger dark:border-danger',
       },
     },
     defaultVariants: {
@@ -25,15 +24,15 @@ const alertVariants = cva(
 
 function AlertIcon({ variant }: VariantProps<typeof alertVariants>) {
   const icons = {
-    default: 'lucide:chevron-right',
-    info: 'lucide:info',
-    warning: 'lucide:triangle-alert',
-    important: 'lucide:circle-alert',
-    success: 'lucide:circle-check',
-    danger: 'lucide:circle-x',
+    default: 'i-lucide-chevron-right',
+    info: 'i-lucide-info',
+    warning: 'i-lucide-triangle-alert',
+    important: 'i-lucide-circle-alert',
+    success: 'i-lucide-circle-check',
+    danger: 'i-lucide-circle-x',
   };
   return (
-    <Icon icon={icons[variant ?? 'default']} className='h-4 w-4' />
+    <span className={cn(icons[variant ?? 'default'], 'h-4 w-4')} />
   );
 }
 

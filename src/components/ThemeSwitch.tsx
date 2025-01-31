@@ -1,6 +1,5 @@
 'use client';
 
-import { Icon } from '@iconify/react';
 import { useTheme } from 'next-themes';
 import { Button } from './ui/button';
 
@@ -16,7 +15,7 @@ export function ThemeSwitch() {
 
   return (
     <Button variant='ghost' size='icon' onClick={startTransition}>
-      <Icon icon={theme === 'dark' ? 'lucide:moon' : 'lucide:sun'} />
+      <div className='i-lucide-sun dark:i-lucide-moon' />
     </Button>
   );
 }

@@ -1,7 +1,6 @@
 import type { ButtonProps } from '@/components/ui/button';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Icon } from '@iconify/react';
 // import NextLink from 'next/link';
 import { Link as NextLink } from 'next-view-transitions';
 
@@ -66,7 +65,7 @@ function PaginationPrevious({
       className={cn('gap-1 pl-2.5', className)}
       {...props}
     >
-      <Icon icon='lucide:chevron-left' className='h-4 w-4' />
+      <div className='i-lucide-chevron-left h-4 w-4' />
       <span>Previous</span>
     </PaginationLink>
   );
@@ -84,7 +83,7 @@ function PaginationNext({
       {...props}
     >
       <span>Next</span>
-      <Icon icon='lucide:chevron-right' className='h-4 w-4' />
+      <div className='i-lucide-chevron-right h-4 w-4' />
     </PaginationLink>
   );
 }
@@ -99,7 +98,7 @@ function PaginationEllipsis({
       className={cn('flex h-9 w-9 items-center justify-center', className)}
       {...props}
     >
-      <Icon icon='lucide:more-horizontal' className='h-4 w-4' />
+      <div className='i-lucide-more-horizontal h-4 w-4' />
       <span className='sr-only'>More pages</span>
     </span>
   );

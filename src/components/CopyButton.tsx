@@ -1,7 +1,6 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
 import { Button } from './ui/button';
 
@@ -32,7 +31,7 @@ export function CopyButton({ className, ...props }: React.ComponentPropsWithRef<
 
   return (
     <Button className={cn('absolute top-3 right-3 h-8 w-8', copied && 'text-success hover:text-success', className)} variant='ghost' size='icon' onClick={copy} {...props}>
-      <Icon icon={copied ? 'lucide:check' : 'lucide:copy'} />
+      <div className={copied ? 'i-lucide-check' : 'i-lucide-copy'} />
     </Button>
   );
 }

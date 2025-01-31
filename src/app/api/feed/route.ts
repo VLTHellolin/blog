@@ -1,6 +1,8 @@
 import { getSortedPosts } from '@/lib/posts';
 import RSS from 'rss';
 
+export const dynamic = 'force-static';
+
 export async function GET() {
   const feed = new RSS({
     title: 'Hellolin\'s Blog',
