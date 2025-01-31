@@ -23,7 +23,7 @@ function SocialLink({ href, text }: { href: string; text: string }) {
 export default function Page() {
   return (
     <Container>
-      <div className='m-2 flex flex-col justify-between gap-10 md:m-10 lg:flex-row'>
+      <div className='flex flex-col justify-between gap-10 md:m-10 lg:flex-row'>
         <div>
           <div className='flex items-baseline gap-2'>
             <span className='text-2xl font-semibold'>
@@ -49,7 +49,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className='w-2/5 flex flex-col gap-2'>
+        <div className='flex flex-col gap-2 md:w-2/5'>
           <SocialLink href='https://github.com/VLTHellolin' text='GitHub' />
           <SocialLink href='https://x.com/VLTHellolin' text='Twitter' />
           <SocialLink href='mailto:i@hellolin.top' text='Email' />

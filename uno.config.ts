@@ -9,8 +9,9 @@ export default defineConfig({
     presetShadcn(),
     presetIcons({
       collections: {
-        lucide: () => import('@iconify-json/lucide/icons.json').then(e => e.default),
-        ri: () => import('@iconify-json/ri/icons.json').then(e => e.default),
+        'lucide': () => import('@iconify-json/lucide/icons.json').then(e => e.default),
+        'ri': () => import('@iconify-json/ri/icons.json').then(e => e.default),
+        'simple-icons': () => import('@iconify-json/simple-icons/icons.json').then(e => e.default) as any,
       },
     }),
   ],

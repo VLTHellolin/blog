@@ -111,6 +111,9 @@ importers:
       '@iconify-json/ri':
         specifier: ^1.2.5
         version: 1.2.5
+      '@iconify-json/simple-icons':
+        specifier: ^1.2.22
+        version: 1.2.22
       '@types/mdast':
         specifier: ^4.0.4
         version: 4.0.4
@@ -730,6 +733,9 @@ packages:
 
   '@iconify-json/ri@1.2.5':
     resolution: {integrity: sha512-kWGimOXMZrlYusjBKKXYOWcKhbOHusFsmrmRGmjS7rH0BpML5A9/fy8KHZqFOwZfC4M6amObQYbh8BqO5cMC3w==}
+
+  '@iconify-json/simple-icons@1.2.22':
+    resolution: {integrity: sha512-0UzThRMwHuOJfgpp+tyV/y2uEBLjFVrxC4igv9iWjSEQEBK4tNjWZNTRCBCYyv/FwWVYyKAsA8tZQ8vUYzvFnw==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -3891,6 +3897,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/ri@1.2.5':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/simple-icons@1.2.22':
     dependencies:
       '@iconify/types': 2.0.0
 
