@@ -26,7 +26,7 @@ export function Project({ text, description, href, technologies, external, archi
 
   return (
     <NextLink href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>
-      <Card className='h-full flex flex-1 items-center justify-between p-5'>
+      <Card className='h-full flex flex-1 items-center justify-between p-5 transition-colors hover:bg-accent/40'>
         <CardHeader className='p-0'>
           <CardTitle className='flex items-center gap-2 text-base'>
             {text}

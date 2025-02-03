@@ -5,7 +5,7 @@ export async function Post({ post }: { post: string }) {
   const { title, description, date } = (await import(`^/posts/${post}.md`)).frontmatter;
 
   return (
-    <Card>
+    <Card className='transition-colors hover:bg-accent/40'>
       <CardHeader>
         <CardTitle className='w-fit text-xl' style={{ viewTransitionName: `post-title-${post}` }}>
           {title}
