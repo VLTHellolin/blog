@@ -12,7 +12,10 @@ const withMDX = createMDX({
   extension: /\.md$/,
   options: {
     remarkPlugins: [
-      [remarkFrontmatter, { type: 'yaml', marker: '-' }],
+      [remarkFrontmatter, {
+        type: 'yaml',
+        marker: '-',
+      }],
       [remarkMdxFrontmatter],
       [remarkMdxToc],
       [remarkGfm],
@@ -20,16 +23,19 @@ const withMDX = createMDX({
     ],
     rehypePlugins: [
       [rehypeKatex, { strict: true }],
-      [rehypeShiki, { themes: { light: 'github-light-default', dark: 'github-dark-default' } }],
+      [rehypeShiki, {
+        themes: {
+          light: 'github-light-default',
+          dark: 'github-dark-default',
+        },
+      }],
     ],
   },
 });
 
 const nextConfig: NextConfig = {
   pageExtensions: ['ts', 'tsx', 'md'],
-  experimental: {
-    reactCompiler: true,
-  },
+  experimental: { reactCompiler: true },
 };
 
 export default withMDX(nextConfig);
