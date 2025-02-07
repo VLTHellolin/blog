@@ -4,6 +4,8 @@ import { cn } from '@/lib/utils';
 // import NextLink from 'next/link';
 import { Link as NextLink } from 'next-view-transitions';
 
+import * as React from 'react';
+
 function Pagination({ className, ...props }: React.ComponentPropsWithRef<'nav'>) {
   return (
     <nav
@@ -28,10 +30,8 @@ function PaginationItem({ className, ...props }: React.ComponentPropsWithRef<'li
   return <li className={cn('', className)} {...props} />;
 }
 
-type PaginationLinkProps = {
-  isActive?: boolean;
-} & Pick<ButtonProps, 'size'> &
-React.ComponentPropsWithRef<typeof NextLink>;
+type PaginationLinkProps = { isActive?: boolean } & Pick<ButtonProps, 'size'> &
+  React.ComponentPropsWithRef<typeof NextLink>;
 
 function PaginationLink({
   className,

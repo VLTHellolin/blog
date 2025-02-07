@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import * as React from 'react';
 
 export function Leading({ children, className, ...props }: React.ComponentPropsWithRef<'p'>) {
   return (

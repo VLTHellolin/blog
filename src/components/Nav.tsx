@@ -6,7 +6,10 @@ import { Button } from './ui/button';
 
 const ThemeSwitch = dynamic(() => import('@/components/ThemeSwitch'));
 
-function NavLink({ href, text }: { href: string; text: string }) {
+function NavLink({ href, text }: {
+  href: string;
+  text: string;
+}) {
   const icons = {
     home: 'i-lucide-house',
     blog: 'i-lucide-book-text',

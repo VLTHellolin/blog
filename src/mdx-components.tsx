@@ -10,6 +10,7 @@ import { Alert, AlertDescription, AlertIcon, AlertTitle } from './components/ui/
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from './components/ui/table';
 import { withAlertType } from './lib/githubAlert';
 
+// eslint-disable-next-line react-hooks-extra/no-useless-custom-hooks
 export function useMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     a: Link,

@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import * as React from 'react';
 import { CopyButton } from './CopyButton';
 
 export function Pre({ children, className, ...props }: React.ComponentPropsWithRef<'pre'>) {

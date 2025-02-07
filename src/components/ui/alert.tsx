@@ -16,9 +16,7 @@ const alertVariants = cva(
         danger: 'border-danger/50 text-danger dark:border-danger',
       },
     },
-    defaultVariants: {
-      variant: 'default',
-    },
+    defaultVariants: { variant: 'default' },
   },
 );
 

@@ -2,7 +2,10 @@ import { Container } from '@/components/Container';
 import { Link } from '@/components/Link';
 import { cn } from '@/lib/utils';
 
-function SocialLink({ href, text }: { href: string; text: string }) {
+function SocialLink({ href, text }: {
+  href: string;
+  text: string;
+}) {
   const icons = {
     github: 'i-lucide-github',
     twitter: 'i-lucide-twitter',
@@ -61,4 +64,4 @@ export default function Page() {
       </div>
     </Container>
   );
-};
+}

@@ -20,7 +20,10 @@ export function createAstExport(name: string, data: unknown): RootContent {
               declarations: [
                 {
                   type: 'VariableDeclarator',
-                  id: { type: 'Identifier', name },
+                  id: {
+                    type: 'Identifier',
+                    name,
+                  },
                   init: valueToEstree(data, { preserveReferences: true }),
                 },
               ],

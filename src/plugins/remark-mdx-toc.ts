@@ -12,7 +12,7 @@ export default function remarkMdxToc() {
   return (ast: Root) => {
     const result: TocHeading[] = [];
 
-    visit(ast, 'heading', (node) => {
+    visit(ast, 'heading', node => {
       if (node.depth === 1)
         return;
 

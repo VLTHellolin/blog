@@ -16,11 +16,7 @@ export async function generateStaticParams() {
   return (await getPosts()).map(post => ({ slug: post }));
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const slug = (await params).slug;
 
   return (
@@ -28,4 +24,4 @@ export default async function Page({
       <PostList page={Number.parseInt(slug)} />
     </Container>
   );
-};
+}

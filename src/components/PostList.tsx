@@ -2,11 +2,7 @@ import { getSortedPosts } from '@/lib/posts';
 import { Post } from './Post';
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from './ui/pagination';
 
-export async function PostList({
-  page,
-}: {
-  page: number;
-}) {
+export async function PostList({ page }: { page: number }) {
   // 8 posts per page
   const posts = await getSortedPosts();
   const postsLength = Math.ceil(posts.length / 8);

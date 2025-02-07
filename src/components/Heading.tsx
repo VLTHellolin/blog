@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import { transformTitleId } from '@/plugins/utils';
+import * as React from 'react';
 
 function headingFactory(level: 1 | 2 | 3 | 4 | 5 | 6) {
   return function ({ children, className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
@@ -27,7 +28,7 @@ function headingFactory(level: 1 | 2 | 3 | 4 | 5 | 6) {
       </Tag>
     );
   };
-};
+}
 
 export const H1 = headingFactory(1);
 export const H2 = headingFactory(2);

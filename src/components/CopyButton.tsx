@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
+import * as React from 'react';
 import { Button } from './ui/button';
 
 export function CopyButton({ className, ...props }: React.ComponentPropsWithRef<typeof Button>) {
@@ -30,6 +31,7 @@ export function CopyButton({ className, ...props }: React.ComponentPropsWithRef<
   };
 
   return (
+    // eslint-disable-next-line ts/no-misused-promises
     <Button className={cn('absolute top-3 right-3 h-8 w-8', copied && 'text-success hover:text-success', className)} variant='ghost' size='icon' onClick={copy} {...props}>
       <div className={copied ? 'i-lucide-check' : 'i-lucide-copy'} />
     </Button>

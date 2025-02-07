@@ -7,4 +7,4 @@ export default function Page() {
       <PostList page={1} />
     </Container>
   );
-};
+}

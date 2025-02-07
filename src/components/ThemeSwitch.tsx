@@ -5,9 +5,12 @@ import { Button } from './ui/button';
 
 export function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
-  const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
 
   const startTransition = () => {
+    // eslint-disable-next-line ts/no-unnecessary-condition
     if (!document.startViewTransition)
       toggleTheme();
     else document.startViewTransition(toggleTheme);

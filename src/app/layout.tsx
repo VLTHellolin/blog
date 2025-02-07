@@ -1,6 +1,7 @@
 import { Nav } from '@/components/Nav';
 import { ThemeProvider } from 'next-themes';
 import { ViewTransitions } from 'next-view-transitions';
+import * as React from 'react';
 
 import '@unocss/reset/tailwind.css';
 import '@/styles/global.css';
@@ -24,4 +25,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </body>
     </html>
   );
-};
+}

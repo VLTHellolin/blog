@@ -4,12 +4,9 @@ import type { TocHeading } from '@/plugins/remark-mdx-toc';
 import { cn } from '@/lib/utils';
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
+import * as React from 'react';
 
-export function TOC({
-  toc,
-}: {
-  toc: TocHeading[];
-}) {
+export function TOC({ toc }: { toc: TocHeading[] }) {
   const [activeId, setActiveId] = useState('');
 
   useEffect(() => {
@@ -19,6 +16,7 @@ export function TOC({
       for (const heading of headingElements) {
         const rect = heading.getBoundingClientRect();
         if (rect.top >= 0 && rect.top <= window.innerHeight * 0.5) {
+          // eslint-disable-next-line react-hooks-extra/no-direct-set-state-in-use-effect
           setActiveId(heading.id);
           return;
         }
@@ -27,7 +25,9 @@ export function TOC({
 
     handleScroll(); // immediatly update
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [toc]);
 
   return (
