@@ -1,6 +1,7 @@
 import { Nav } from '@/components/Nav';
 import { ThemeProvider } from 'next-themes';
 import { ViewTransitions } from 'next-view-transitions';
+import Script from 'next/script';
 import * as React from 'react';
 
 import '@unocss/reset/tailwind.css';
@@ -22,6 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {children}
           </ThemeProvider>
         </ViewTransitions>
+        {process.env.NODE_ENV === 'production' && <Script defer src='https://umami.admin.hellolin.top/script.js' data-website-id='987464e7-93d8-4f20-96da-12ff04815703' />}
       </body>
     </html>
   );
