@@ -28,7 +28,7 @@ export function Project({ text, description, href, technologies, external, archi
   return (
     <NextLink href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined}>
       <Card className='h-full flex flex-1 items-center justify-between p-5 transition-colors hover:bg-accent/40'>
-        <CardHeader className='p-0'>
+        <CardHeader className='p-0 md:max-w-85%'>
           <CardTitle className='flex items-center gap-2 text-base'>
             {text}
             <span className='flex items-center gap-2 text-muted-foreground'>
@@ -37,13 +37,16 @@ export function Project({ text, description, href, technologies, external, archi
               ))}
             </span>
             {archived && <Badge variant='warning'>Archived</Badge>}
-            {developing && <Badge variant='success'>Work in Progress</Badge>}
+            {developing && <Badge variant='success'>
+              <span className='hidden md:inline-block'>Work in Progress</span>
+              <span className='inline-block md:hidden'>WIP</span>
+            </Badge>}
           </CardTitle>
           <CardDescription>
             {description}
           </CardDescription>
         </CardHeader>
-        <div className={cn(type === 'website' ? 'i-lucide-arrow-up-right' : 'i-lucide-code-xml', 'w-6 h-6')} />
+        <div className={cn(type === 'website' ? 'i-lucide-arrow-up-right' : 'i-lucide-code-xml', 'w-6 h-6 lt-md:hidden')} />
       </Card>
     </NextLink>
   );

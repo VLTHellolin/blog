@@ -29,7 +29,7 @@ export function Nav() {
   return (
     <nav className='fixed top-0 z-100 w-full flex justify-center border-b bg-background/70 backdrop-blur'>
       <div className='flex justify-center container'>
-        <div className='h-14 w-2/3 flex items-center'>
+        <div className='h-14 w-2/3 flex items-center lt-md:w-90%'>
           <NextLink className='mr-4 flex items-center gap-2 font-bold lt-md:hidden' href='/'>
             <div className='i-lucide-chart-no-axes-gantt' />
             VLTHellolin
