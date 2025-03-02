@@ -17,6 +17,15 @@ const projects: ProjectItem[] = [
     type: 'source',
   },
   {
+    text: 'Silv UI',
+    description: 'A collection of beautiful, highly customizable UI components. Powered by UnoCSS.',
+    href: 'https://github.com/VLTHellolin/silv-ui',
+    technologies: ['react', 'typescript', 'unocss'],
+    external: true,
+    developing: true,
+    type: 'source',
+  },
+  {
     text: 'Blue Archive Navigator',
     description: 'Utilities for Blue Archive players.',
     href: 'https://github.com/VLTHellolin/BlueArchiveNavigator',

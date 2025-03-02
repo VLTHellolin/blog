@@ -10,10 +10,11 @@ export interface ProjectItem {
   technologies: string[];
   external?: boolean;
   archived?: boolean;
+  developing?: boolean;
   type: 'website' | 'source';
 }
 
-export function Project({ text, description, href, technologies, external, archived, type }: ProjectItem) {
+export function Project({ text, description, href, technologies, external, archived, developing, type }: ProjectItem) {
   const tech = {
     react: 'i-simple-icons-react',
     next: 'i-simple-icons-nextdotjs',
@@ -36,6 +37,7 @@ export function Project({ text, description, href, technologies, external, archi
               ))}
             </span>
             {archived && <Badge variant='warning'>Archived</Badge>}
+            {developing && <Badge variant='success'>Work in Progress</Badge>}
           </CardTitle>
           <CardDescription>
             {description}
